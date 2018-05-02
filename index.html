@@ -27,13 +27,15 @@
                 </ul>
             </div>
             <div class="col studentInformationView">
-                Enter your information and we'll contact you
-                Name : <input type="text">
-                Age: <input type="text">
-                Experience Playing Any Instrument: <input type="text">
-                Email : <input type="text">
-                Mobile Number: <input type="text">
-                <button id="goToPayment">Go To Payment</button>
+                <div class="form">
+                    Enter your information and we'll contact you
+                    <div id="nameInput">Name : <input type="text" data-toggle="#ageInput"></div> 
+                    <div id="ageInput">Age: <input type="number" data-toggle="#xpInput"></div>
+                    <div id="xpInput">Years of experience Playing Any Instrument: <input type="number" required="true" data-toggle="#emailInput"></div>
+                    <div id="emailInput">Email : <input type="email" data-toggle="#mobileInput"></div>
+                    <div id="mobileInput">Mobile Number: <input type="number" data-toggle="#submitButton"></div>
+                    <div id="submitButton"><button id="goToPayment">Go To Payment</button></div>
+                </div>
             </div>
             <div class="col paymentMethodView">
                 Please visit the Registrar and make a payment within 6 days

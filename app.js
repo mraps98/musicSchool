@@ -19,6 +19,12 @@ $(document).ready(function(){
 
     $("#classList").on("click",function(){
         $(".studentInformationView").show();
+        $("#nameInput").show();
+    });
+
+    $("input").on('input',function(){
+        var item = $(this).attr("data-toggle");
+        $(item).show();
     });
 
     $("#goToPayment").on('click',function(){
