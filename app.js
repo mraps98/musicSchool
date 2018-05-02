@@ -14,7 +14,14 @@ $(document).ready(function(){
         var i = $(this).attr('value');
         $("#classList").empty();
         $("#classList").append("<li>" + "Beginner " + instruments[i] + "</li><li>Intermeddiate " + instruments[i] + "</li><li>Advanced " + instruments[i] + "");
+        $(".classSelectingView").show();
     });
-    
 
+    $("#classList").on("click",function(){
+        $(".studentInformationView").show();
+    });
+
+    $("#goToPayment").on('click',function(){
+        $(".paymentMethodView").show();
+    });
 });
