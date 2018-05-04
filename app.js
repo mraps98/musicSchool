@@ -2,22 +2,31 @@ $(document).ready(function(){
     
     var instruments = ["Guitar","Piano","Drums","Flute","Clarinet","Sitar","Tabla"];
 
+    function initialize(){
+        $(".col").hide();
+        $(".instrumentSelectingView").show();
+        fillUpInstrumentList();
+    }
+
     function fillUpInstrumentList(){
+        $("#instrumentsList").empty();
         for (var i = 0; i < instruments.length; i++){
-            $("#instrumentsList").append("<li value='" + i + "' class=\"instrumentName\" >" + instruments[i] + "</li>");
+            $("#instrumentsList").append("<li class=\"instrumentList\" value=" + i  + ">" + instruments[i] + "</li>");
         }
-    }    
-
-    fillUpInstrumentList();
-
-    $(".instrumentName").on('click',function(){
+    }
+    
+    $(document).on('click',".instrumentList", function(){
+        $(".instrumentList").removeClass("clicked");
+        $(this).addClass("clicked");
         var i = $(this).attr('value');
-        $("#classList").empty();
-        $("#classList").append("<li>" + "Beginner " + instruments[i] + "</li><li>Intermeddiate " + instruments[i] + "</li><li>Advanced " + instruments[i] + "");
+        $("#classesList").empty();
+        $("#classesList").append("<li class=\"classList\">Beginner " + instruments[i] + "</li><li class=\"classList\">Intermeddiate " + instruments[i] + "</li><li class=\"classList\">Advanced " + instruments[i] + "</li>");
         $(".classSelectingView").show();
     });
 
-    $("#classList").on("click",function(){
+    $(document).on('click',".classList", function(){
+        $(".classList").removeClass("clicked");
+        $(this).addClass("clicked");
         $(".studentInformationView").show();
         $("#nameInput").show();
     });
@@ -30,4 +39,6 @@ $(document).ready(function(){
     $("#goToPayment").on('click',function(){
         $(".paymentMethodView").show();
     });
+
+    initialize();
 });

@@ -10,3 +10,19 @@
 .form div{
     display:none;
 }
+.col{
+    border:0.001rem solid black;
+    background: cornsilk;
+}
+#title{
+    margin:auto;
+}
+ul{
+    list-style-type:none;
+}
+li:hover{
+    background:burlywood;
+}
+.clicked{
+    background: darkkhaki;
+}
