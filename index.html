@@ -30,16 +30,26 @@
             <div class="col studentInformationView">
                 <div class="form">
                     Enter your information and we'll contact you
-                    <div id="nameInput">Name : <input type="text" data-toggle="#ageInput"></div> 
-                    <div id="ageInput">Age: <input type="number" data-toggle="#xpInput"></div>
-                    <div id="xpInput">Years of experience Playing Any Instrument: <input type="number" required="true" data-toggle="#emailInput"></div>
-                    <div id="emailInput">Email : <input type="email" data-toggle="#mobileInput"></div>
-                    <div id="mobileInput">Mobile Number: <input type="number" data-toggle="#submitButton"></div>
+                    <div id="nameInput">Name : <input id="nameInputBox" type="text" data-toggle="#ageInput"></div> 
+                    <div id="ageInput">Age: <input id="ageInputBox" type="number" data-toggle="#xpInput"></div>
+                    <div id="xpInput">Years of experience Playing Any Instrument: <input id="xpInputBox" type="number" required="true" data-toggle="#emailInput"></div>
+                    <div id="emailInput">Email : <input id="emailInputBox" type="email" data-toggle="#mobileInput"></div>
+                    <div id="mobileInput">Mobile Number: <input id="mobileInputBox" type="number" data-toggle="#submitButton"></div>
                     <div id="submitButton"><button id="goToPayment">Go To Payment</button></div>
                 </div>
             </div>
             <div class="col paymentMethodView">
-                Please visit the Registrar and make a payment within 6 days
+                Please visit the Registrar with this ticket:-
+                <div class="ticket">
+                    <strong>Singh Music School Ticket</strong><br>
+                    <hr>
+                    Name: <span id="nameOutput"></span><br>
+                    Class: <span id="classOutput"></span><br>
+                    Age: <span id="ageOutput"></span><br>
+                    Experience of playing any instrument: <span id="xpOutput"> Years</span><br>
+                    Email: <span id="emailOutput"></span><br>
+                    Mobile: <span id="mobileOutput"></span>
+                </div>
             </div>
         </div>
     </div>

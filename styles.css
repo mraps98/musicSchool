@@ -26,3 +26,8 @@ li:hover{
 .clicked{
     background: darkkhaki;
 }
+.ticket{
+    background: white;
+    padding:0 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
